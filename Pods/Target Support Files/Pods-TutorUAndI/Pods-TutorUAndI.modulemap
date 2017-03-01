@@ -1,6 +1,0 @@
-framework module Pods_TutorUAndI {
-  umbrella header "Pods-TutorUAndI-umbrella.h"
-
-  export *
-  module * { export * }
-}
