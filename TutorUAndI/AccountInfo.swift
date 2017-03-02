@@ -10,24 +10,21 @@ import Foundation
 import Firebase
 
 
-
-
-
 class AccountInfo
 {
     /*
      Example to use this function
      
-        -- Have to logIn before addNewAccInfo
-        -- **It will auto log in the new account after Sign Up
+     -- Have to logIn before addNewAccInfo
+     -- **It will auto log in the new account after Sign Up
      
-        AccountSetting.logInWithEmail("shan27@pdx.edu", "BIANhao5213"){(error) in
-            print(error ?? "log in successfully!")
-        }
+     AccountSetting.logInWithEmail("shan27@pdx.edu", "BIANhao5213"){(error) in
+     print(error ?? "log in successfully!")
+     }
      
-        -- call the function
-        let result = AccountInfo.addNewAccountBasicInfo("ZeyongShan", 1, "19941223", "shan27@pdx.edu")
-        print(result)
+     -- call the function
+     let result = AccountInfo.addNewAccountBasicInfo("ZeyongShan", 1, "19941223", "shan27@pdx.edu")
+     print(result)
      
      */
     

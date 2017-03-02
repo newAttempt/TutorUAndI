@@ -10,28 +10,16 @@
 		2DACBE2E01C96891D121EF54 /* Pods_TutorUAndI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB703AEDF63C3DA3DB266E6 /* Pods_TutorUAndI.framework */; };
 		3F45B2291E66934E00D17D0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F45B2281E66934E00D17D0A /* AppDelegate.swift */; };
 		3F45B22B1E66934E00D17D0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F45B22A1E66934E00D17D0A /* ViewController.swift */; };
-		3F45B22E1E66934E00D17D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F45B22C1E66934E00D17D0A /* Main.storyboard */; };
 		3F45B2301E66934E00D17D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F45B22F1E66934E00D17D0A /* Assets.xcassets */; };
 		3F45B2331E66934E00D17D0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F45B2311E66934E00D17D0A /* LaunchScreen.storyboard */; };
 		3F45B23B1E66936100D17D0A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F45B23A1E66936100D17D0A /* GoogleService-Info.plist */; };
-<<<<<<< Updated upstream
 		3F6F3F8E1E675B1D009F6D89 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F3F8D1E675B1D009F6D89 /* AccountInfo.swift */; };
+		3F93AD291E67C0BC00E3023E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F93AD281E67C0BC00E3023E /* Main.storyboard */; };
 		3FADCC4A1E6697630075F361 /* AccountSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FADCC491E6697630075F361 /* AccountSetting.swift */; };
-=======
-		3FADCC4A1E6697630075F361 /* AccountMangement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FADCC491E6697630075F361 /* AccountMangement.swift */; };
->>>>>>> Stashed changes
 		D741BADF1E6696E000568493 /* buttonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = D741BADC1E6696E000568493 /* buttonBlue.png */; };
+		D741BAE01E6696E000568493 /* InitBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D741BADD1E6696E000568493 /* InitBackground.jpg */; };
 		D741BAE51E669A9100568493 /* logoBoarder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D741BAE41E669A9100568493 /* logoBoarder.jpg */; };
-		D741BAE81E669D5800568493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D741BAE61E669D5800568493 /* Main.storyboard */; };
 		D741BAEC1E66A50100568493 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D741BAEB1E66A50100568493 /* logo.png */; };
-<<<<<<< Updated upstream
-=======
-		D741BAEE1E66BC4200568493 /* homeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D741BAED1E66BC4200568493 /* homeIcon.png */; };
-		D741BAF11E66BE2B00568493 /* tutorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D741BAEF1E66BE2B00568493 /* tutorIcon.png */; };
-		D741BAF21E66BE2B00568493 /* accountIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D741BAF01E66BE2B00568493 /* accountIcon.png */; };
-		D741BAF41E677E1E00568493 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D741BAF31E677E1E00568493 /* HomeViewController.swift */; };
-		D741BAF61E677E7A00568493 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D741BAF51E677E7A00568493 /* ProfileViewController.swift */; };
->>>>>>> Stashed changes
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,24 +27,19 @@
 		3F45B2251E66934E00D17D0A /* TutorUAndI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutorUAndI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F45B2281E66934E00D17D0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F45B22A1E66934E00D17D0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3F45B22D1E66934E00D17D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F45B22F1E66934E00D17D0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F45B2321E66934E00D17D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F45B2341E66934E00D17D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F45B23A1E66936100D17D0A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F6F3F8D1E675B1D009F6D89 /* AccountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
+		3F93AD281E67C0BC00E3023E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3FADCC491E6697630075F361 /* AccountSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSetting.swift; sourceTree = "<group>"; };
 		6DF5CEEACAAE9350F03815B8 /* Pods-TutorUAndI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorUAndI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutorUAndI/Pods-TutorUAndI.debug.xcconfig"; sourceTree = "<group>"; };
 		9AB703AEDF63C3DA3DB266E6 /* Pods_TutorUAndI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TutorUAndI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D741BADC1E6696E000568493 /* buttonBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonBlue.png; sourceTree = "<group>"; };
+		D741BADD1E6696E000568493 /* InitBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = InitBackground.jpg; sourceTree = "<group>"; };
 		D741BAE41E669A9100568493 /* logoBoarder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logoBoarder.jpg; sourceTree = "<group>"; };
-		D741BAE71E669D5800568493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D741BAEB1E66A50100568493 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		D741BAED1E66BC4200568493 /* homeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeIcon.png; sourceTree = "<group>"; };
-		D741BAEF1E66BE2B00568493 /* tutorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorIcon.png; sourceTree = "<group>"; };
-		D741BAF01E66BE2B00568493 /* accountIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accountIcon.png; sourceTree = "<group>"; };
-		D741BAF31E677E1E00568493 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		D741BAF51E677E7A00568493 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +78,7 @@
 				3F45B23E1E6693BE00D17D0A /* AccountManagementModule */,
 				3F45B23D1E66939C00D17D0A /* AccountViewControllers */,
 				3F45B23C1E66937D00D17D0A /* SupportingFiles */,
-				3F45B22C1E66934E00D17D0A /* Main.storyboard */,
+				3F93AD281E67C0BC00E3023E /* Main.storyboard */,
 			);
 			path = TutorUAndI;
 			sourceTree = "<group>";
@@ -103,14 +86,8 @@
 		3F45B23C1E66937D00D17D0A /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				D741BAE61E669D5800568493 /* Main.storyboard */,
+				3F93AD271E67C07A00E3023E /* SupportingImage */,
 				3F45B2281E66934E00D17D0A /* AppDelegate.swift */,
-				D741BAEF1E66BE2B00568493 /* tutorIcon.png */,
-				D741BAF01E66BE2B00568493 /* accountIcon.png */,
-				D741BAE41E669A9100568493 /* logoBoarder.jpg */,
-				D741BAEB1E66A50100568493 /* logo.png */,
-				D741BADC1E6696E000568493 /* buttonBlue.png */,
-				D741BAED1E66BC4200568493 /* homeIcon.png */,
 				3F45B22F1E66934E00D17D0A /* Assets.xcassets */,
 				3F45B2311E66934E00D17D0A /* LaunchScreen.storyboard */,
 				3F45B2341E66934E00D17D0A /* Info.plist */,
@@ -123,8 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				3F45B22A1E66934E00D17D0A /* ViewController.swift */,
-				D741BAF31E677E1E00568493 /* HomeViewController.swift */,
-				D741BAF51E677E7A00568493 /* ProfileViewController.swift */,
 			);
 			name = AccountViewControllers;
 			sourceTree = "<group>";
@@ -136,6 +111,17 @@
 				3F6F3F8D1E675B1D009F6D89 /* AccountInfo.swift */,
 			);
 			name = AccountManagementModule;
+			sourceTree = "<group>";
+		};
+		3F93AD271E67C07A00E3023E /* SupportingImage */ = {
+			isa = PBXGroup;
+			children = (
+				D741BADD1E6696E000568493 /* InitBackground.jpg */,
+				D741BAE41E669A9100568493 /* logoBoarder.jpg */,
+				D741BAEB1E66A50100568493 /* logo.png */,
+				D741BADC1E6696E000568493 /* buttonBlue.png */,
+			);
+			name = SupportingImage;
 			sourceTree = "<group>";
 		};
 		EA6DE3491589E0C600F43B24 /* Pods */ = {
@@ -219,16 +205,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F45B2331E66934E00D17D0A /* LaunchScreen.storyboard in Resources */,
-				D741BAF11E66BE2B00568493 /* tutorIcon.png in Resources */,
+				D741BAE01E6696E000568493 /* InitBackground.jpg in Resources */,
 				D741BAEC1E66A50100568493 /* logo.png in Resources */,
-				D741BAF21E66BE2B00568493 /* accountIcon.png in Resources */,
 				3F45B23B1E66936100D17D0A /* GoogleService-Info.plist in Resources */,
 				3F45B2301E66934E00D17D0A /* Assets.xcassets in Resources */,
 				D741BADF1E6696E000568493 /* buttonBlue.png in Resources */,
-				D741BAE81E669D5800568493 /* Main.storyboard in Resources */,
+				3F93AD291E67C0BC00E3023E /* Main.storyboard in Resources */,
 				D741BAE51E669A9100568493 /* logoBoarder.jpg in Resources */,
-				3F45B22E1E66934E00D17D0A /* Main.storyboard in Resources */,
-				D741BAEE1E66BC4200568493 /* homeIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,37 +273,19 @@
 				3FADCC4A1E6697630075F361 /* AccountSetting.swift in Sources */,
 				3F6F3F8E1E675B1D009F6D89 /* AccountInfo.swift in Sources */,
 				3F45B22B1E66934E00D17D0A /* ViewController.swift in Sources */,
-				D741BAF61E677E7A00568493 /* ProfileViewController.swift in Sources */,
 				3F45B2291E66934E00D17D0A /* AppDelegate.swift in Sources */,
-				D741BAF41E677E1E00568493 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3F45B22C1E66934E00D17D0A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F45B22D1E66934E00D17D0A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3F45B2311E66934E00D17D0A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3F45B2321E66934E00D17D0A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		D741BAE61E669D5800568493 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D741BAE71E669D5800568493 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
