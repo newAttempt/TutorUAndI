@@ -20,31 +20,48 @@ class AccountInfo
     private static let user = FIRAuth.auth()?.currentUser
     
     
-    class func addNewAccountBasicInfo(_ name: String, _ gender: Int, _ dob: String, _ email:String) -> Bool
+    class func addNewAccountBasicInfo(_ name: String, _ gender: Int, _ dob: String, _ email:String) -> String?
     {
         
         
         if  user == nil
         {
             //No user log in right now !!!
-            return false
+            return "No user log in right now !!!"
         }
         
+        
+        if dob.characters.count != 8
+        {
+            return "Wrong formet for Date of Brith !!!"
+        }
+        
+        
+        if gender > 2 || gender < 0
+        {
+            return "Wrong formet for gender !!!"
+        }
         
         ref.child("accInfo").child(user!.uid).child("name").setValue(name)
         ref.child("accInfo").child(user!.uid).child("gender").setValue(gender)
         ref.child("accInfo").child(user!.uid).child("dob").setValue(dob)
         ref.child("accInfo").child(user!.uid).child("email").setValue(email)
-        return true
+        return nil
     }
     
     
-    class func addNewAccountAddressInfo(_ stNo:String, _ streetName: String, _ apt:String, _ city: String, _ state: String, _ zip: Int) -> Bool
+    class func addNewAccountAddressInfo(_ stNo:String, _ streetName: String, _ apt:String, _ city: String, _ state: String, _ zip: Int) -> String?
     {
         if  user == nil
         {
             //No user log in right now !!!
-            return false
+            return "No user log in right now !!!"
+        }
+        
+        
+        if  "\(zip)".characters.count != 5
+        {
+            return "worng zip code formet !!!"
         }
         
         
@@ -54,23 +71,34 @@ class AccountInfo
         ref.child("accInfo").child(user!.uid).child("address").child("City").setValue(city)
         ref.child("accInfo").child(user!.uid).child("address").child("State").setValue(state)
         ref.child("accInfo").child(user!.uid).child("address").child("Zip").setValue(zip)
-        return true
+        return nil
     }
     
     
-    class func addNewAccountBankInfo(_ cardNo:String, _ expireDate4Digit:String, _ cardHolder:String) -> Bool
+    class func addNewAccountBankInfo(_ cardNo:String, _ expireDate4Digit:String, _ cardHolder:String) -> String?
     {
         if  user == nil
         {
             //No user log in right now !!!
-            return false
+            return "No user log in right now !!!"
+        }
+        
+        
+        if cardNo.characters.count != 16
+        {
+            return "worng card No. formet !!!"
+        }
+        
+        if expireDate4Digit.characters.count != 4
+        {
+            return "wrong expire date formet !!!"
         }
         
         
         ref.child("accInfo").child(user!.uid).child("bank").child("cardNo").setValue(cardNo)
         ref.child("accInfo").child(user!.uid).child("bank").child("expDate").setValue(expireDate4Digit)
         ref.child("accInfo").child(user!.uid).child("bank").child("holder").setValue(cardHolder)
-        return true
+        return nil
     }
     
     
