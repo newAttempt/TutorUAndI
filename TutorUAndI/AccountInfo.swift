@@ -193,109 +193,109 @@ class AccountInfo
 
 
 
-
-
-
-
 /*
- 
- =========important=========
- it may not work if writing the log in part and getAccountInfo part together!
- because it cannot ensure that log in will be implement first!
- But it will work if user log in before like 1 second.
- ***The return values for the first three functions has been replaced to String.
- =========important=========
- 
- ======================================================================================================
- 1.Examples :  addNewAccountBasicInfo
- 
- 
- -- Have to logIn before addNewAccInfo
- -- **It will auto log in the new account after Sign Up
- 
- AccountSetting.logInWithEmail("shan27@pdx.edu", "BIANhao5213"){(error) in
- print(error ?? "log in successfully!")
- }
- 
- -- call the function
- let result = AccountInfo.addNewAccountBasicInfo("ZeyongShan", 1, "YYYYMMDD(has to be 8 digits)", "shan27@pdx.edu")
- print(result)
- 
- ======================================================================================================
- 2.Examples :  addNewAccountAddressInfo
- 
- 
- -- Have to logIn before addNewAccInfo
- let result = AccountInfo.addNewAccountAddressInfo("ex.No", "ex.St", "ex.no", "exCity", "exState", 000000)
- print(result)
- 
- 
- ======================================================================================================
- 3.Examples :   addNewAccountBankInfo
- 
- let result = AccountInfo.addNewAccountBankInfo("Example card number", "MMYY(has to be 4 digits)")
- print(result)
- 
- 
- 
- ======================================================================================================
- 4.Examples :   getAccountBasicInfo
- 
- -- Have to logIn before getAccountBasicInfo
- -- *All the arguments for completionHandler is optional.
- 
- let result = AccountInfo.getAccountBasicInfo(completionHandler:
- { (name, gender, dob, email) in
- if name != nil
- {
- print("name is: \(name!)")
- }
- if gender != nil
- {
- print("gender is: \(gender!)")
- }
- if dob != nil
- {
- print("dob is: \(dob!)")
- }
- if email != nil
- {
- print("email is: \(email!))")
- }
- 
- })
- -- The return value doesn't means we get the value, it only means the user already log in
- print(result)
- 
- 
- ======================================================================================================
- 5.Examples :   getAccountAddressInfo
- 
- 
- let result = AccountInfo.getAccountAddressInfo()
- {(stNo, stName, apt, city, state, zip) in
- print(stNo ?? "nothing")
- print(stName ?? "nothing")
- print(apt ?? "nothing")
- print(city ?? "nothing")
- print(state ?? "nothing")
- print(zip ?? "nothing")
- 
- }
- print(result)
- 
- 
- ======================================================================================================
- 6.Examples :   getAccountBankInfo
- 
- 
- let result = AccountInfo.getAccountBankInfo()
- { (cardNo, expDate, holder) in
- print(cardNo ?? "nothing!!!")  -- already replaced first 12 digits with XXXXXXXXXXXX
- print(expDate ?? "nothing!!!")
- print(holder ?? "nothing!!!")
- }
- print(result)
- 
- */
 
+
+
+
+
+=========important=========
+it may not work if writing the log in part and getAccountInfo part together!
+because it cannot ensure that log in will be implement first!
+But it will work if user log in before like 1 second.
+***The return values for the first three functions has been replaced to String.
+=========important=========
+
+======================================================================================================
+1.Examples :  addNewAccountBasicInfo
+
+
+-- Have to logIn before addNewAccInfo
+-- **It will auto log in the new account after Sign Up
+
+AccountSetting.logInWithEmail("shan27@pdx.edu", "BIANhao5213"){(error) in
+    print(error ?? "log in successfully!")
+    }
+    
+    -- call the function
+let result = AccountInfo.addNewAccountBasicInfo("ZeyongShan", 1, "YYYYMMDD(has to be 8 digits)", "shan27@pdx.edu")
+print(result)
+    
+    ======================================================================================================
+    2.Examples :  addNewAccountAddressInfo
+
+
+-- Have to logIn before addNewAccInfo
+let result = AccountInfo.addNewAccountAddressInfo("ex.No", "ex.St", "ex.no", "exCity", "exState", 000000)
+print(result)
+    
+    
+    ======================================================================================================
+    3.Examples :   addNewAccountBankInfo
+
+let result = AccountInfo.addNewAccountBankInfo("Example card number", "MMYY(has to be 4 digits)")
+print(result)
+    
+    
+    
+    ======================================================================================================
+    4.Examples :   getAccountBasicInfo
+
+-- Have to logIn before getAccountBasicInfo
+-- *All the arguments for completionHandler is optional.
+
+let result = AccountInfo.getAccountBasicInfo(completionHandler:
+    { (name, gender, dob, email) in
+        if name != nil
+        {
+            print("name is: \(name!)")
+        }
+        if gender != nil
+        {
+            print("gender is: \(gender!)")
+        }
+        if dob != nil
+        {
+            print("dob is: \(dob!)")
+        }
+        if email != nil
+        {
+            print("email is: \(email!))")
+        }
+        
+})
+    -- The return value doesn't means we get the value, it only means the user already log in
+print(result)
+    
+    
+    ======================================================================================================
+    5.Examples :   getAccountAddressInfo
+
+
+let result = AccountInfo.getAccountAddressInfo()
+    {(stNo, stName, apt, city, state, zip) in
+        print(stNo ?? "nothing")
+        print(stName ?? "nothing")
+        print(apt ?? "nothing")
+        print(city ?? "nothing")
+        print(state ?? "nothing")
+        print(zip ?? "nothing")
+        
+}
+print(result)
+    
+    
+    ======================================================================================================
+    6.Examples :   getAccountBankInfo
+
+
+let result = AccountInfo.getAccountBankInfo()
+    { (cardNo, expDate, holder) in
+        print(cardNo ?? "nothing!!!")  -- already replaced first 12 digits with XXXXXXXXXXXX
+        print(expDate ?? "nothing!!!")
+        print(holder ?? "nothing!!!")
+}
+print(result)
+
+
+*/

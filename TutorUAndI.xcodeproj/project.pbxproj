@@ -75,6 +75,7 @@
 		3F45B2271E66934E00D17D0A /* TutorUAndI */ = {
 			isa = PBXGroup;
 			children = (
+				D72B0EBC1E68DA0D00E2506E /* ItemManagementModule */,
 				3F45B23E1E6693BE00D17D0A /* AccountManagementModule */,
 				3F45B23D1E66939C00D17D0A /* AccountViewControllers */,
 				3F45B23C1E66937D00D17D0A /* SupportingFiles */,
@@ -122,6 +123,13 @@
 				D741BADC1E6696E000568493 /* buttonBlue.png */,
 			);
 			name = SupportingImage;
+			sourceTree = "<group>";
+		};
+		D72B0EBC1E68DA0D00E2506E /* ItemManagementModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ItemManagementModule;
 			sourceTree = "<group>";
 		};
 		EA6DE3491589E0C600F43B24 /* Pods */ = {
