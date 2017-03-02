@@ -203,6 +203,7 @@ class AccountInfo
  it may not work if writing the log in part and getAccountInfo part together!
  because it cannot ensure that log in will be implement first!
  But it will work if user log in before like 1 second.
+ ***The return values for the first three functions has been replaced to String.
  =========important=========
  
  ======================================================================================================
