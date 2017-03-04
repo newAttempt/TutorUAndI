@@ -49,6 +49,22 @@ class AccountSetting
     }
     
     
+    class func logInAdminAccount(completionHandler: @escaping (String?) -> ())
+    {
+        FIRAuth.auth()?.signIn(withEmail: "shan27@pdx.edu", password: "BIANhao5213", completion: {(user, error) in
+            if error != nil
+            {
+                completionHandler("connot find admin account!")
+            }
+            else
+            {
+                completionHandler(nil)
+            }
+        })
+    }
+
+    
+    
     class func logOut(completionHandler: @escaping (Bool) -> ())
     {
         do
@@ -60,19 +76,6 @@ class AccountSetting
         
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

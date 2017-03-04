@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2DACBE2E01C96891D121EF54 /* Pods_TutorUAndI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB703AEDF63C3DA3DB266E6 /* Pods_TutorUAndI.framework */; };
+		3F2E3B811E6A95D200055502 /* Help & Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E3B801E6A95D200055502 /* Help & Contact.swift */; };
 		3F45B2291E66934E00D17D0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F45B2281E66934E00D17D0A /* AppDelegate.swift */; };
 		3F45B22B1E66934E00D17D0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F45B22A1E66934E00D17D0A /* ViewController.swift */; };
 		3F45B2301E66934E00D17D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F45B22F1E66934E00D17D0A /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		096CB963B76BA04052B1830E /* Pods-TutorUAndI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorUAndI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TutorUAndI/Pods-TutorUAndI.release.xcconfig"; sourceTree = "<group>"; };
+		3F2E3B801E6A95D200055502 /* Help & Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Help & Contact.swift"; sourceTree = "<group>"; };
 		3F45B2251E66934E00D17D0A /* TutorUAndI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutorUAndI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F45B2281E66934E00D17D0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F45B22A1E66934E00D17D0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				3FADCC491E6697630075F361 /* AccountSetting.swift */,
 				3F6F3F8D1E675B1D009F6D89 /* AccountInfo.swift */,
+				3F2E3B801E6A95D200055502 /* Help & Contact.swift */,
 			);
 			name = AccountManagementModule;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				3F6F3F8E1E675B1D009F6D89 /* AccountInfo.swift in Sources */,
 				3F45B22B1E66934E00D17D0A /* ViewController.swift in Sources */,
 				3F45B2291E66934E00D17D0A /* AppDelegate.swift in Sources */,
+				3F2E3B811E6A95D200055502 /* Help & Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

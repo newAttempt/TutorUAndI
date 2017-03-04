@@ -42,6 +42,7 @@ class AccountInfo
             return "Wrong formet for gender !!!"
         }
         
+        // call the firbase apt to store values in the database.
         ref.child("accInfo").child(user!.uid).child("name").setValue(name)
         ref.child("accInfo").child(user!.uid).child("gender").setValue(gender)
         ref.child("accInfo").child(user!.uid).child("dob").setValue(dob)
@@ -64,7 +65,7 @@ class AccountInfo
             return "worng zip code formet !!!"
         }
         
-        
+        // call the firbase apt to store values in the database.
         ref.child("accInfo").child(user!.uid).child("address").child("StNo").setValue(stNo)
         ref.child("accInfo").child(user!.uid).child("address").child("StName").setValue(streetName)
         ref.child("accInfo").child(user!.uid).child("address").child("Apt").setValue(apt)
@@ -94,7 +95,7 @@ class AccountInfo
             return "wrong expire date formet !!!"
         }
         
-        
+        // call the firbase apt to store values in the database.
         ref.child("accInfo").child(user!.uid).child("bank").child("cardNo").setValue(cardNo)
         ref.child("accInfo").child(user!.uid).child("bank").child("expDate").setValue(expireDate4Digit)
         ref.child("accInfo").child(user!.uid).child("bank").child("holder").setValue(cardHolder)
@@ -112,12 +113,12 @@ class AccountInfo
         
         
         ref.child("accInfo").child(user!.uid).observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            let name = value?["name"] as! String?
+            let value = snapshot.value as? NSDictionary     // get the value from database and save them as NSDinctionary.
+            let name = value?["name"] as! String?           // get those informaion.
             let gender = value?["gender"] as! Int?
             let dob = value?["dob"] as! String?
             let email = value?["email"] as! String?
-            completionHandler(name, gender, dob, email)
+            completionHandler(name, gender, dob, email)     // call the completionHandler which is a lamda experssion which passed in.
         })
         return true
     }
@@ -133,14 +134,14 @@ class AccountInfo
         
         
         ref.child("accInfo").child(user!.uid).child("address").observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            let strNo = value?["StNo"] as! String?
+            let value = snapshot.value as? NSDictionary     // get the value from database and save them as NSDinctionary.
+            let strNo = value?["StNo"] as! String?          // get those informaion.
             let strName = value?["StName"] as! String?
             let apt = value?["Apt"] as! String?
             let city = value?["City"] as! String?
             let state = value?["State"] as! String?
             let zip = value?["Zip"] as! Int?
-            completionHandler(strNo, strName, apt, city, state, zip)
+            completionHandler(strNo, strName, apt, city, state, zip)     // call the completionHandler which is a lamda experssion which passed in.
         })
         return true
     }
@@ -156,8 +157,8 @@ class AccountInfo
         
         
         ref.child("accInfo").child(user!.uid).child("bank").observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            var cardNo = value?["cardNo"] as! String?
+            let value = snapshot.value as? NSDictionary     // get the value from database and save them as NSDinctionary.
+            var cardNo = value?["cardNo"] as! String?       // get those informaion.
             let expireDate = value?["expDate"] as! String?
             let cardHolder = value?["holder"] as! String?
             
@@ -175,20 +176,12 @@ class AccountInfo
                 cardNo?.append(temp!)
             }
             
-            completionHandler(cardNo, expireDate, cardHolder)
+            completionHandler(cardNo, expireDate, cardHolder)     // call the completionHandler which is a lamda experssion which passed in.
         })
         return true
     }
     
 }
-
-
-
-
-
-
-
-
 
 
 
