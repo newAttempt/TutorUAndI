@@ -37,6 +37,7 @@ class SignUpViewController:LogInController{
     @IBOutlet weak var passwordComfirmTestField: UITextField!
     
     @IBAction func signUpButton(_ sender: UIButton) {
+
         
         AccountSetting.signUpWithEmail(emailTextField.text!, passwordTestField.text!, completionHandler: {
             (error) in
@@ -45,12 +46,12 @@ class SignUpViewController:LogInController{
                 //print(error ?? "sign up successfully!")
                 self.testerlabel.textColor = UIColor.cyan
                 self.testerlabel.text = "Sign Up successfully!"
-                
+
                 self.performSegue(withIdentifier: "testToSegue", sender: self)
                 
             }
             else{
-                
+
                 self.testerlabel.textColor = UIColor.red
                 self.testerlabel.text = error
                 // self.textFieldDidBeginEditing(self.emailTextField)

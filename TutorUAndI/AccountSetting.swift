@@ -24,7 +24,7 @@ class AccountSetting
         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: {(user, error) in
             if error != nil
             {
-                completionHandler("Email already been used!")
+                completionHandler(error?.localizedDescription);//("Email already been used!")
             }
             else
             {

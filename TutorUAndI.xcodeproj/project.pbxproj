@@ -15,12 +15,10 @@
 		3F45B23B1E66936100D17D0A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F45B23A1E66936100D17D0A /* GoogleService-Info.plist */; };
 		3F93AD291E67C0BC00E3023E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F93AD281E67C0BC00E3023E /* Main.storyboard */; };
 		D722A6AC1E6E108D0018D09A /* ItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722A6AB1E6E108D0018D09A /* ItemsManager.swift */; };
-		D722A6AE1E6E10B80018D09A /* Help & Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722A6AD1E6E10B80018D09A /* Help & Contact.swift */; };
 		D722A6B11E6E10ED0018D09A /* AccountSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722A6AF1E6E10ED0018D09A /* AccountSetting.swift */; };
 		D722A6B21E6E10ED0018D09A /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722A6B01E6E10ED0018D09A /* AccountInfo.swift */; };
 		D75CC8FB1E6BA5E5003BF24F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CC8FA1E6BA5E5003BF24F /* SignUpViewController.swift */; };
 		D75CC8FD1E6C045E003BF24F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CC8FC1E6C045E003BF24F /* ProfileViewController.swift */; };
-		D75CC8FF1E6CBFEA003BF24F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CC8FE1E6CBFEA003BF24F /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,12 +34,10 @@
 		6DF5CEEACAAE9350F03815B8 /* Pods-TutorUAndI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorUAndI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutorUAndI/Pods-TutorUAndI.debug.xcconfig"; sourceTree = "<group>"; };
 		9AB703AEDF63C3DA3DB266E6 /* Pods_TutorUAndI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TutorUAndI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D722A6AB1E6E108D0018D09A /* ItemsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsManager.swift; sourceTree = "<group>"; };
-		D722A6AD1E6E10B80018D09A /* Help & Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Help & Contact.swift"; sourceTree = "<group>"; };
 		D722A6AF1E6E10ED0018D09A /* AccountSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSetting.swift; sourceTree = "<group>"; };
 		D722A6B01E6E10ED0018D09A /* AccountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		D75CC8FA1E6BA5E5003BF24F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D75CC8FC1E6C045E003BF24F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		D75CC8FE1E6CBFEA003BF24F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +99,6 @@
 			children = (
 				3F45B22A1E66934E00D17D0A /* LogInController.swift */,
 				D75CC8FC1E6C045E003BF24F /* ProfileViewController.swift */,
-				D75CC8FE1E6CBFEA003BF24F /* ViewController.swift */,
 				D75CC8FA1E6BA5E5003BF24F /* SignUpViewController.swift */,
 			);
 			name = AccountViewControllers;
@@ -114,7 +109,6 @@
 			children = (
 				D722A6AF1E6E10ED0018D09A /* AccountSetting.swift */,
 				D722A6B01E6E10ED0018D09A /* AccountInfo.swift */,
-				D722A6AD1E6E10B80018D09A /* Help & Contact.swift */,
 			);
 			name = AccountManagementModule;
 			sourceTree = "<group>";
@@ -273,9 +267,7 @@
 				3F45B22B1E66934E00D17D0A /* LogInController.swift in Sources */,
 				D722A6B11E6E10ED0018D09A /* AccountSetting.swift in Sources */,
 				3F45B2291E66934E00D17D0A /* AppDelegate.swift in Sources */,
-				D75CC8FF1E6CBFEA003BF24F /* ViewController.swift in Sources */,
 				D75CC8FD1E6C045E003BF24F /* ProfileViewController.swift in Sources */,
-				D722A6AE1E6E10B80018D09A /* Help & Contact.swift in Sources */,
 				D75CC8FB1E6BA5E5003BF24F /* SignUpViewController.swift in Sources */,
 				D722A6B21E6E10ED0018D09A /* AccountInfo.swift in Sources */,
 			);

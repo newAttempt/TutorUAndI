@@ -74,10 +74,17 @@ class ProfileViewController:LogInController, UIPickerViewDelegate,UIPickerViewDa
     
     
     
+
+    /*
+    //UITableViewDelegate, UITableViewDataSource{
+
+    let list = ["Name", "D.O.B", "Gender", "Email", "Address", "Bank Acc.", "School", "Major"]
+
     
 //UITableViewDelegate, UITableViewDataSource{
 
     /*let list = ["Name", "D.O.B", "Gender", "Email", "Address", "Bank Acc.", "School", "Major"]
+
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
        
@@ -94,6 +101,14 @@ class ProfileViewController:LogInController, UIPickerViewDelegate,UIPickerViewDa
     {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell1")
         cell.textLabel?.text = list[indexPath.row]
+
+    
+    
+        
+        return (cell)
+    }
+    */
+
         
         return (cell)
     }*/
