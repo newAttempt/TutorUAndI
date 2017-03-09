@@ -39,7 +39,7 @@ class AccountSetting
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: {(user, error) in
             if error != nil
             {
-                completionHandler("Account or password maybe worng!")
+                completionHandler(error?.localizedDescription)
             }
             else
             {
@@ -54,7 +54,7 @@ class AccountSetting
         FIRAuth.auth()?.signIn(withEmail: "shan27@pdx.edu", password: "BIANhao5213", completion: {(user, error) in
             if error != nil
             {
-                completionHandler("connot find admin account!")
+                completionHandler(error?.localizedDescription)
             }
             else
             {
