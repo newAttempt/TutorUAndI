@@ -31,19 +31,31 @@ class SignUpViewController:LogInController{
        
     }
     
-    @IBOutlet weak var testerlabel: UILabel!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTestField: UITextField!
-    @IBOutlet weak var passwordComfirmTestField: UITextField!
+    @IBOutlet weak private var testerlabel: UILabel!
+    @IBOutlet weak private var emailTextField: UITextField!
+    @IBOutlet weak private var password: UITextField!
+    @IBOutlet weak private var confirm: UITextField!
+    
     
     @IBAction func signUpButton(_ sender: UIButton) {
 
+        if self.password.text == nil || self.confirm.text == nil || self.emailTextField.text == nil
+        {
+            testerlabel.text = "Please fill the blanks."
+            return
+        }   // Check if any text field is empty.
         
-        AccountSetting.signUpWithEmail(emailTextField.text!, passwordTestField.text!, completionHandler: {
+        if self.password.text! != self.confirm.text!
+        {
+            testerlabel.text = "passwords don't match!"
+            return
+        }   // Check if the passwords don't match.
+        
+        AccountSetting.signUpWithEmail(emailTextField.text!, password.text!, completionHandler: {
             (error) in
             if(error == nil)
             {
-                //print(error ?? "sign up successfully!")
+                
                 self.testerlabel.textColor = UIColor.cyan
                 self.testerlabel.text = "Sign Up successfully!"
 

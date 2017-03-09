@@ -10,8 +10,8 @@ import UIKit
 
 class LogInController: UIViewController, UITextFieldDelegate{
     
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak private var userNameTextField: UITextField!
+    @IBOutlet weak private var passwordTextField: UITextField!
     
     
     @IBAction func logIn() {
