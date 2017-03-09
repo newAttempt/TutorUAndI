@@ -26,6 +26,7 @@ class LogInController: UIViewController, UITextFieldDelegate{
             {
                 self.errorLabel.textColor = UIColor.blue
                 self.errorLabel.text = "Log in successfully!"
+                self.performSegue(withIdentifier: "logIntoMainPageSegue", sender: nil)
                 return
             }
             self.errorLabel.textColor = UIColor.red
