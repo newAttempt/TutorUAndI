@@ -10,38 +10,30 @@ import UIKit
 
 class LogInController: UIViewController, UITextFieldDelegate{
     
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak private var userNameTextField: UITextField!
+    @IBOutlet weak private var passwordTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     
-    @IBAction func logIn() {
+    @IBAction private func logIn() {
         let username = userNameTextField.text
         let password = passwordTextField.text
-      
+
         AccountSetting.logInWithEmail(username!, password!)
         {
-            
-            //AccountSetting.logInWithEmail("shan27@pdx.edu", "BIANhao5213")
             (error) in
-            //print(error ?? "Log in successfully!!")
-            //print(username ?? "NO username")
-            //print(password ?? "NO password")
             if error == nil
             {
-                self.temp.textColor = UIColor.blue
-                self.temp.text = "Log in successfully!"
+                self.errorLabel.textColor = UIColor.blue
+                self.errorLabel.text = "Log in successfully!"
+                return
             }
-            
-            if error != nil
-            {
-                self.temp.textColor = UIColor.red
-                self.temp.text = error
-                self.logIn()
-            }
+            self.errorLabel.textColor = UIColor.red
+            self.errorLabel.text = error
         }
     }
     
-    @IBAction func signUp() {
+    @IBAction private func signUp() {
         print("go to sign up page!")
     }
     
@@ -56,8 +48,7 @@ class LogInController: UIViewController, UITextFieldDelegate{
         // Dispose of any resources that can be recreated.
     }
 
-    @IBOutlet weak var temp: UILabel!
-    
+ 
     // keyboard shows
     func textFieldDidBeginEditing(_ textField: UITextField){
         moveTextField(textField: textField, moveDistance: -250, up: true)

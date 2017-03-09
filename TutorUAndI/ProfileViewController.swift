@@ -11,14 +11,38 @@ import UIKit
 class ProfileViewController:LogInController, UIPickerViewDelegate,UIPickerViewDataSource{
     
     
-    @IBOutlet weak var genderTextBox: UITextField!
-    @IBOutlet weak var dobTextBox: UITextField!
+    @IBOutlet weak private var genderTextBox: UITextField!
+    @IBOutlet weak private var dobTextBox: UITextField!
     
-    @IBOutlet weak var genderDropDown: UIPickerView!
-    @IBOutlet weak var dobDropDown: UIPickerView!
+    @IBOutlet weak private var genderDropDown: UIPickerView!
+    @IBOutlet weak private var dobDropDown: UIPickerView!
+    @IBOutlet weak private var dob_dd_textField: UITextField!
+    @IBOutlet weak private var dob_yy_textField: UITextField!
     
-    var dob = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"]
-    var gender = ["Female", "Male", "Other"]
+    @IBOutlet weak private var nameTextField: UITextField!
+    @IBOutlet weak private var schoolTextField: UITextField!
+    @IBOutlet weak private var majorTextField: UITextField!
+    
+    @IBOutlet weak private var streetTextField: UITextField!
+    @IBOutlet weak private var cityTextField: UITextField!
+    @IBOutlet weak private var stateTextField: UITextField!
+    @IBOutlet weak private var zipCodeTextField: UITextField!
+    @IBOutlet weak private var unitNoTextField: UITextField!
+    
+    @IBOutlet weak private var cardNoTextField: UITextField!
+    @IBOutlet weak private var expireMonthTextField: UITextField!
+    @IBOutlet weak private var expireYearTextField: UITextField!
+    
+    
+    
+    private var dobMap = [
+        "Jan": "01" , "Feb": "02", "Mar": "03", "Apr": "04", "May": "05",
+        "June": "06", "July": "07", "Aug": "08", "Sep": "09", "Oct": "10",
+        "Nov": "11", "Dec": "12"
+    ]
+    
+    private var dob = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"]
+    private var gender = ["Female", "Male", "Other"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -70,6 +94,24 @@ class ProfileViewController:LogInController, UIPickerViewDelegate,UIPickerViewDa
     }
     
     
+    @IBAction func saveInfo() {
+        var gender: Int = 0
+        switch genderTextBox.text! {
+        case "Female": gender = 0
+        case "Male":   gender = 1
+        default :      gender = 2
+        }
+        
+        var dob = dob_yy_textField.text!
+        dob = dob.appending(dobMap[dobTextBox.text!]!)
+        dob = dob.appending(dob_dd_textField.text!)
+        var error = AccountInfo.addNewAccountBasicInfo(nameTextField.text!, gender, dob, "empty", schoolTextField.text!, majorTextField.text!)
+        print(error ?? "add basic info successfully!")
+        error = AccountInfo.addNewAccountAddressInfo(streetTextField.text!, unitNoTextField.text!, cityTextField.text!, stateTextField.text!, Int(zipCodeTextField.text!)!)
+        print(error ?? "add address info successfully!")
+        error = AccountInfo.addNewAccountBankInfo(cardNoTextField.text!, expireMonthTextField.text!.appending(expireYearTextField.text!), "card holder")
+        print(error ?? "add bank info successfully!")
+    }
     
     
     

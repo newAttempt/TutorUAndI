@@ -20,7 +20,7 @@ class AccountInfo
     private static let user = FIRAuth.auth()?.currentUser
     
     
-    class func addNewAccountBasicInfo(_ name: String, _ gender: Int, _ dob: String, _ email:String) -> String?
+    class func addNewAccountBasicInfo(_ name: String, _ gender: Int, _ dob: String, _ email:String, _ school:String, _ major:String) -> String?
     {
         
         
@@ -31,27 +31,31 @@ class AccountInfo
         }
         
         
-        if dob.characters.count != 8
+        var error = ErrorChecker.checkIfDobValid(dob)
+        if error != nil
         {
-            return "Wrong formet for Date of Brith !!!"
+            return error
         }
         
-        
-        if gender > 2 || gender < 0
+        error = ErrorChecker.checkIfGenderValid(gender)
+        if error != nil
         {
-            return "Wrong formet for gender !!!"
+            return error
         }
+        
         
         // call the firbase apt to store values in the database.
         ref.child("accInfo").child(user!.uid).child("name").setValue(name)
         ref.child("accInfo").child(user!.uid).child("gender").setValue(gender)
         ref.child("accInfo").child(user!.uid).child("dob").setValue(dob)
         ref.child("accInfo").child(user!.uid).child("email").setValue(email)
+        ref.child("accInfo").child(user!.uid).child("school").setValue(school)
+        ref.child("accInfo").child(user!.uid).child("major").setValue(major)
         return nil
     }
     
     
-    class func addNewAccountAddressInfo(_ stNo:String, _ streetName: String, _ apt:String, _ city: String, _ state: String, _ zip: Int) -> String?
+    class func addNewAccountAddressInfo(_ street:String, _ apt:String, _ city: String, _ state: String, _ zip: Int) -> String?
     {
         if  user == nil
         {
@@ -66,8 +70,7 @@ class AccountInfo
         }
         
         // call the firbase apt to store values in the database.
-        ref.child("accInfo").child(user!.uid).child("address").child("StNo").setValue(stNo)
-        ref.child("accInfo").child(user!.uid).child("address").child("StName").setValue(streetName)
+        ref.child("accInfo").child(user!.uid).child("address").child("St").setValue(street)
         ref.child("accInfo").child(user!.uid).child("address").child("Apt").setValue(apt)
         ref.child("accInfo").child(user!.uid).child("address").child("City").setValue(city)
         ref.child("accInfo").child(user!.uid).child("address").child("State").setValue(state)
@@ -103,7 +106,7 @@ class AccountInfo
     }
     
     
-    class func getAccountBasicInfo(completionHandler: @escaping (_ name:String?, _ gender:Int?, _ dob:String?, _ email:String?) -> ()) -> Bool
+    class func getAccountBasicInfo(completionHandler: @escaping (_ name:String?, _ gender:Int?, _ dob:String?, _ email:String?, _ school:String?, _ major:String?) -> ()) -> Bool
     {
         if  user == nil
         {
@@ -118,13 +121,15 @@ class AccountInfo
             let gender = value?["gender"] as! Int?
             let dob = value?["dob"] as! String?
             let email = value?["email"] as! String?
-            completionHandler(name, gender, dob, email)     // call the completionHandler which is a lamda experssion which passed in.
+            let school = value?["school"] as! String?
+            let major = value?["major"] as! String?
+            completionHandler(name, gender, dob, email, school, major)     // call the completionHandler which is a lamda experssion which passed in.
         })
         return true
     }
     
     
-    class func getAccountAddressInfo(completionHandler: @escaping (_ streetNo: String?, _ streetName: String?, _ apt:String?, _ city:String?, _ state: String?, _ zip: Int?) -> ()) -> Bool
+    class func getAccountAddressInfo(completionHandler: @escaping (_ street: String?, _ apt:String?, _ city:String?, _ state: String?, _ zip: Int?) -> ()) -> Bool
     {
         if  user == nil
         {
@@ -135,13 +140,12 @@ class AccountInfo
         
         ref.child("accInfo").child(user!.uid).child("address").observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary     // get the value from database and save them as NSDinctionary.
-            let strNo = value?["StNo"] as! String?          // get those informaion.
-            let strName = value?["StName"] as! String?
+            let st = value?["St"] as! String?          // get those informaion.
             let apt = value?["Apt"] as! String?
             let city = value?["City"] as! String?
             let state = value?["State"] as! String?
             let zip = value?["Zip"] as! Int?
-            completionHandler(strNo, strName, apt, city, state, zip)     // call the completionHandler which is a lamda experssion which passed in.
+            completionHandler(st, apt, city, state, zip)     // call the completionHandler which is a lamda experssion which passed in.
         })
         return true
     }
@@ -181,6 +185,7 @@ class AccountInfo
         return true
     }
     
+    
 }
 
 
@@ -211,7 +216,7 @@ AccountSetting.logInWithEmail("shan27@pdx.edu", "BIANhao5213"){(error) in
     }
     
     -- call the function
-let result = AccountInfo.addNewAccountBasicInfo("ZeyongShan", 1, "YYYYMMDD(has to be 8 digits)", "shan27@pdx.edu")
+let result = AccountInfo.addNewAccountBasicInfo("ZeyongShan", 1, "YYMMDD(has to be 8 digits)", "shan27@pdx.edu")
 print(result)
     
     ======================================================================================================

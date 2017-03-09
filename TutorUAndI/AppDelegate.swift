@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
+        var error = AccountInfo.addNewAccountBasicInfo("zeyong shan", 1, "941223", "empty", "psu", "cs")
+        print(error ?? "add basic info successfully!")
         return true
     }
 
