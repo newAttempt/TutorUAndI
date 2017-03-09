@@ -31,16 +31,18 @@ class AccountInfo
         }
         
         
-        if dob.characters.count != 6
+        var error = ErrorChecker.checkIfDobValid(dob)
+        if error != nil
         {
-            return "Wrong formet for Date of Brith !!!"
+            return error
         }
         
-        
-        if gender > 2 || gender < 0
+        error = ErrorChecker.checkIfGenderValid(gender)
+        if error != nil
         {
-            return "Wrong formet for gender !!!"
+            return error
         }
+        
         
         // call the firbase apt to store values in the database.
         ref.child("accInfo").child(user!.uid).child("name").setValue(name)
@@ -182,6 +184,7 @@ class AccountInfo
         })
         return true
     }
+    
     
 }
 
