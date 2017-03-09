@@ -820,6 +820,7 @@
                                     <navigationItem title="HOME" id="pDq-88-Z5Y"/>
                                 </items>
                             </navigationBar>
+<!--
 <<<<<<< HEAD
 =======
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLd-IR-dam">
@@ -834,6 +835,8 @@
                                 <color key="barTintColor" red="0.81973111629486084" green="0.94946688413619995" blue="0.95433145761489868" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tabBar>
 >>>>>>> 6059aa723edf5f660c138a8834b85352a27bfecc
+
+-->
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XFz-tS-e1c">
                                 <rect key="frame" x="55" y="180" width="265" height="405"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
