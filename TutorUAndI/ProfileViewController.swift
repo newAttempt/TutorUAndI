@@ -11,14 +11,14 @@ import UIKit
 class ProfileViewController:LogInController, UIPickerViewDelegate,UIPickerViewDataSource{
     
     
-    @IBOutlet weak var genderTextBox: UITextField!
-    @IBOutlet weak var dobTextBox: UITextField!
+    @IBOutlet weak private var genderTextBox: UITextField!
+    @IBOutlet weak private var dobTextBox: UITextField!
     
-    @IBOutlet weak var genderDropDown: UIPickerView!
-    @IBOutlet weak var dobDropDown: UIPickerView!
+    @IBOutlet weak private var genderDropDown: UIPickerView!
+    @IBOutlet weak private var dobDropDown: UIPickerView!
     
-    var dob = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"]
-    var gender = ["Female", "Male", "Other"]
+    private var dob = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"]
+    private var gender = ["Female", "Male", "Other"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
