@@ -14,7 +14,7 @@ class ErrorChecker
     
     // Private =======================================================
     
-    private class func checkYear(_ year: String) -> String? 
+    private class func checkYear(_ year: String) -> String?
     {
         let yy_int = Int(year)
         if yy_int == nil
@@ -48,6 +48,34 @@ class ErrorChecker
         }else if dd_int! < 1 || dd_int! > 31
         {
             return "The day should be between 1 to 31"
+        }
+        return nil
+    }
+    
+    
+    private class func checkCardNo(_ no: String) -> String?
+    {
+        if no.characters.count != 16
+        {
+            return "card No. should be a 16 digit number"
+        }
+        if Int(no) == nil
+        {
+            return "card No. contains invalid letters!"
+        }
+        return nil
+    }
+    
+    
+    private class func checkExpritDate(_ date: String) -> String?
+    {
+        if date.characters.count != 4
+        {
+            return "expire date should be a 4 digit number : MMYY"
+        }
+        if Int(date) == nil
+        {
+            return "exprie date contains invalid letters!"
         }
         return nil
     }
@@ -102,7 +130,7 @@ class ErrorChecker
         {
             return error
         }
-
+        
         return nil
     }
     
@@ -113,6 +141,49 @@ class ErrorChecker
         {
             return "Debug Info: Wrong formet for gender !!!"
         } // ****** This is a debug information, not a error message to user!!!!!!
+        return nil
+    }
+    
+    
+    class func checkIfZipValid(_ zip: String) -> String?
+    {
+        if zip.characters.count != 5
+        {
+            return "zip should be a 5 digit number"
+        }
+        
+        let zipNum = Int(zip)
+        if zipNum == nil
+        {
+            return "zip contains invalid letter."
+        }
+        
+        return nil
+    }
+    
+    
+    class func checkIfZipValid(_ zip: Int) -> String?
+    {
+        if  "\(zip)".characters.count != 5
+        {
+            return "worng zip code formet !!!"
+        }
+        return nil
+    }
+    
+    
+    class func checkIfBankValid(_ cardNo: String, _ expirtDate: String) -> String?
+    {
+        var error = checkCardNo(cardNo)
+        if error != nil
+        {
+            return error
+        }
+        error = checkExpritDate(expirtDate)
+        if error != nil
+        {
+            return error
+        }
         return nil
     }
     
