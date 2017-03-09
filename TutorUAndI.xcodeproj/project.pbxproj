@@ -17,6 +17,8 @@
 		D722A6AC1E6E108D0018D09A /* ItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722A6AB1E6E108D0018D09A /* ItemsManager.swift */; };
 		D722A6B11E6E10ED0018D09A /* AccountSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722A6AF1E6E10ED0018D09A /* AccountSetting.swift */; };
 		D722A6B21E6E10ED0018D09A /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722A6B01E6E10ED0018D09A /* AccountInfo.swift */; };
+		D723EB2E1E7115AA006C8F67 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D723EB2D1E7115AA006C8F67 /* MyAccountViewController.swift */; };
+		D723EB301E7125A3006C8F67 /* BarTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D723EB2F1E7125A3006C8F67 /* BarTabViewController.swift */; };
 		D75CC8FB1E6BA5E5003BF24F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CC8FA1E6BA5E5003BF24F /* SignUpViewController.swift */; };
 		D75CC8FD1E6C045E003BF24F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CC8FC1E6C045E003BF24F /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		D722A6AB1E6E108D0018D09A /* ItemsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsManager.swift; sourceTree = "<group>"; };
 		D722A6AF1E6E10ED0018D09A /* AccountSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSetting.swift; sourceTree = "<group>"; };
 		D722A6B01E6E10ED0018D09A /* AccountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
+		D723EB2D1E7115AA006C8F67 /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		D723EB2F1E7125A3006C8F67 /* BarTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarTabViewController.swift; sourceTree = "<group>"; };
 		D75CC8FA1E6BA5E5003BF24F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D75CC8FC1E6C045E003BF24F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +104,8 @@
 				3F45B22A1E66934E00D17D0A /* LogInController.swift */,
 				D75CC8FC1E6C045E003BF24F /* ProfileViewController.swift */,
 				D75CC8FA1E6BA5E5003BF24F /* SignUpViewController.swift */,
+				D723EB2D1E7115AA006C8F67 /* MyAccountViewController.swift */,
+				D723EB2F1E7125A3006C8F67 /* BarTabViewController.swift */,
 			);
 			name = AccountViewControllers;
 			sourceTree = "<group>";
@@ -265,6 +271,8 @@
 			files = (
 				D722A6AC1E6E108D0018D09A /* ItemsManager.swift in Sources */,
 				3F45B22B1E66934E00D17D0A /* LogInController.swift in Sources */,
+				D723EB301E7125A3006C8F67 /* BarTabViewController.swift in Sources */,
+				D723EB2E1E7115AA006C8F67 /* MyAccountViewController.swift in Sources */,
 				D722A6B11E6E10ED0018D09A /* AccountSetting.swift in Sources */,
 				3F45B2291E66934E00D17D0A /* AppDelegate.swift in Sources */,
 				D75CC8FD1E6C045E003BF24F /* ProfileViewController.swift in Sources */,
