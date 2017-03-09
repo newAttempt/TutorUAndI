@@ -18,12 +18,16 @@ class LogInController: UIViewController, UITextFieldDelegate{
     @IBAction private func logIn() {
         let username = userNameTextField.text
         let password = passwordTextField.text
+<<<<<<< HEAD
+      
+=======
         
         if username == nil || password == nil
         {
             return
         } // check if username and password is null.
         
+>>>>>>> 6059aa723edf5f660c138a8834b85352a27bfecc
         AccountSetting.logInWithEmail(username!, password!)
         {
             (error) in
