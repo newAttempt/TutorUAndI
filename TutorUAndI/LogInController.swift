@@ -17,7 +17,7 @@ class LogInController: UIViewController, UITextFieldDelegate{
     @IBAction func logIn() {
         let username = userNameTextField.text
         let password = passwordTextField.text
-        
+      
         AccountSetting.logInWithEmail(username!, password!)
         {
             

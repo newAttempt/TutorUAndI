@@ -312,7 +312,7 @@
                                         <rect key="frame" x="0.0" y="26.5" width="251" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="yes" returnKeyType="go"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="yes" returnKeyType="go" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -332,7 +332,7 @@
                                         <rect key="frame" x="0.0" y="26.5" width="251" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="yes" returnKeyType="go"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="yes" returnKeyType="go" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -395,7 +395,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p67-si-dMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="578.39999999999998" y="122.78860569715144"/>
+            <point key="canvasLocation" x="636" y="122"/>
         </scene>
         <!--ProfileViewController-->
         <scene sceneID="TV7-Ov-uOV">
@@ -777,7 +777,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qN1-Mm-zb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="136.28185907046478"/>
+            <point key="canvasLocation" x="1372" y="122"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="au8-ke-ndd">
@@ -799,9 +799,6 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="0.99846857786178589" green="0.72478789091110229" blue="0.34253552556037903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="cwY-k9-Wne" id="Qwr-cd-aqO"/>
-                                </connections>
                             </searchBar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3mf-bF-kck">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -812,17 +809,6 @@
                                     <navigationItem title="HOME" id="pDq-88-Z5Y"/>
                                 </items>
                             </navigationBar>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLd-IR-dam">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Home" id="L9j-jb-BLG" userLabel="Home"/>
-                                    <tabBarItem title="Student" id="FZ6-Cg-7x0" userLabel="Student"/>
-                                    <tabBarItem title="Tutor" id="Yca-KD-qHA" userLabel="Tutor"/>
-                                </items>
-                                <color key="barTintColor" red="0.81973111629486084" green="0.94946688413619995" blue="0.95433145761489868" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tabBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XFz-tS-e1c">
                                 <rect key="frame" x="55" y="180" width="265" height="405"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -860,7 +846,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0l-n2-uZ9">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="119"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" backgroundImage="moajor_icon"/>
+                                                    <state key="normal" backgroundImage="major_icon"/>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -876,7 +862,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQ5-eY-4xA">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="119"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" backgroundImage="tutor_icon-1"/>
+                                                    <state key="normal" backgroundImage="tutor_icon-2"/>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -924,7 +910,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUs-FX-XOa">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="119"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" backgroundImage="news_icon-1"/>
+                                                    <state key="normal" backgroundImage="news_icon-2"/>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -932,6 +918,17 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLd-IR-dam">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Home" id="L9j-jb-BLG" userLabel="Home"/>
+                                    <tabBarItem title="Student" id="FZ6-Cg-7x0" userLabel="Student"/>
+                                    <tabBarItem title="Tutor" id="Yca-KD-qHA" userLabel="Tutor"/>
+                                </items>
+                                <color key="barTintColor" red="0.81973111629486084" green="0.94946688413619995" blue="0.95433145761489868" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -948,15 +945,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTH-8h-FNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="W2u-aW-C3c">
                     <connections>
-                        <outlet property="delegate" destination="cwY-k9-Wne" id="0Lh-NI-Pb5"/>
                         <outlet property="searchBar" destination="LB1-Zc-wwL" id="4N8-Mm-XsG"/>
-                        <outlet property="searchContentsController" destination="cwY-k9-Wne" id="oM5-Pp-VhD"/>
-                        <outlet property="searchResultsDataSource" destination="cwY-k9-Wne" id="0dr-y1-kng"/>
-                        <outlet property="searchResultsDelegate" destination="cwY-k9-Wne" id="Vp2-a6-Zl8"/>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2132" y="136.28185907046478"/>
+            <point key="canvasLocation" x="2140" y="122"/>
         </scene>
         <!--AccountViewController-->
         <scene sceneID="QMC-Dk-VpB">
@@ -1103,10 +1096,10 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bm8-Rb-6sS">
                                                     <rect key="frame" x="48" y="26" width="279" height="38"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="backgroundColor" red="0.99846857786178589" green="0.72478789091110229" blue="0.34253552556037903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
                                                     <state key="normal" title="LOGOUT">
-                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
                                             </subviews>
@@ -1346,7 +1339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fd6-XQ-ZlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="578" y="787"/>
+            <point key="canvasLocation" x="636" y="787"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9GE-Aq-WUK">
@@ -1375,11 +1368,11 @@
         <image name="grey_BG" width="1146" height="1879"/>
         <image name="logo" width="600" height="600"/>
         <image name="logo_1" width="1146" height="1879"/>
-        <image name="moajor_icon" width="400" height="400"/>
-        <image name="news_icon-1" width="400" height="400"/>
+        <image name="major_icon" width="400" height="400"/>
+        <image name="news_icon-2" width="400" height="400"/>
         <image name="school_icon" width="400" height="400"/>
         <image name="topRated_icon" width="400" height="400"/>
-        <image name="tutor_icon-1" width="400" height="400"/>
+        <image name="tutor_icon-2" width="400" height="400"/>
         <image name="white_bg" width="1146" height="1879"/>
     </resources>
 </document>
