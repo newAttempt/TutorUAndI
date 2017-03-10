@@ -55,7 +55,8 @@ class ProfileViewController:LogInController {
             }
     
     
-    @IBAction func saveInfo() {
+    @IBAction func saveInfo(_ sender: UIButton) {
+    
         var gender: Int = 0
         switch genderTextBox.text! {
         case "Female": gender = 0
