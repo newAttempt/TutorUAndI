@@ -67,7 +67,9 @@ class ItemManager
         }
     }
     
-    class func enlargeQueue()
+    
+    // This function should be called immediately after the user login.
+    class func downloadItems()
     {
         itemRef.observe(.childAdded, with: {(snapshot) -> Void in
             let value = snapshot.value as? NSDictionary
@@ -95,5 +97,27 @@ class ItemManager
         return item_queue.dequeue()
     }
 }
+
+
+
+
+
+/*
+ 
+ 
+ Examples to use this file:
+ 
+    ItemManager.downloadItems();
+    // this function should be called immedately after login.
+ 
+    ItemManager.addItem("major", "course", "topic", "discription", "tutorID")
+    // use this function to add Items in database.
+ 
+    let item = ItemManager.getItem();
+    // use this function to load item ordred.
+ 
+ */
+
+
 
 

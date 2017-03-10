@@ -9,6 +9,9 @@
 import Foundation
 
 
+// This file is not for controller use!
+
+
 class ErrorChecker
 {
     

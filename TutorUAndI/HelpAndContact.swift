@@ -31,7 +31,7 @@ class HelpAndContract
                     }
                     else
                     {
-                        completionHandler(nil, "No account currently and connot log in Admin account!\nAdmin Log In: \(error)")
+                        completionHandler(nil, "No account currently and connot log in Admin account!\nAdmin Log In: \(error!)")
                     }
             }
         }
