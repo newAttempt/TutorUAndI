@@ -71,6 +71,7 @@ class AccountSetting
         do
         {
             try FIRAuth.auth()?.signOut()
+            cleanAccountAndPassword()
         } catch {
             completionHandler(false)
         }
@@ -102,6 +103,12 @@ class AccountSetting
     {
         UserDefaults.standard.setValue(email, forKey: "account")
         UserDefaults.standard.setValue(password, forKey: "password")
+    }
+    
+    private class func cleanAccountAndPassword()
+    {
+        UserDefaults.standard.setValue(nil, forKey: "account")
+        UserDefaults.standard.setValue(nil, forKey: "password")
     }
     
     // ===================================================================== private
