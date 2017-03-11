@@ -29,6 +29,7 @@ class AccountSetting
             else
             {
                 completionHandler(nil)
+                saveAccountAndPassword(email, password)
             }
         })
     }
@@ -44,6 +45,7 @@ class AccountSetting
             else
             {
                 completionHandler(nil)
+                saveAccountAndPassword(email, password)
             }
         })
     }
@@ -64,7 +66,6 @@ class AccountSetting
     }
 
     
-    
     class func logOut(completionHandler: @escaping (Bool) -> ())
     {
         do
@@ -75,7 +76,61 @@ class AccountSetting
         }
         
     }
+    
+    
+    class func logInWithSavedAccount(completionHandler: @escaping (String?) -> ())
+    {
+        let account = UserDefaults.standard.string(forKey: "account")
+        let password = UserDefaults.standard.string(forKey: "password")
+        if account == nil || password == nil
+        {
+            completionHandler("Doesn't find the saved account !")
+            return
+        }
+        logInWithEmail(account!, password!)
+        {
+            (error) in
+            completionHandler(error)
+        }
+    }
+    
+    
+    
+    // private =====================================================================
+    
+    private class func saveAccountAndPassword(_ email: String, _ password: String)
+    {
+        UserDefaults.standard.setValue(email, forKey: "account")
+        UserDefaults.standard.setValue(password, forKey: "password")
+    }
+    
+    // ===================================================================== private
 }
+
+
+
+/*
+    Example for using the logInWithSavedAccount function:
+ 
+    call the function to logIn before the app run in to the logIn viewController each time.
+    if the completionHandler was calling with nil. Then it was loged in.
+    if there is error and the error is "Doesn't find the saved account !", which means user need to log in by themselves.
+    if there is other error except the former one, then, there might be some problem in the user's account.
+ 
+    String error = logInWithSavedAccount()
+    {
+        (error) in
+        if error == nil
+        {
+            ....type code to step into the Home page.
+        }
+        else
+        {
+            ....output the message then let user type the account and password.
+        }
+    }
+ 
+ */
 
 
 

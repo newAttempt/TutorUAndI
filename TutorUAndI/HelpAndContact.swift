@@ -37,7 +37,7 @@ class HelpAndContract
         }
         
         // Get the help and contact information through this function call.
-        ref.child("HelpAndContact").observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
+        ref.child("HelpAndContact").child("offical").observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
             let info = snapshot.value as! String?
             if(info == nil)
             {
@@ -58,6 +58,31 @@ class HelpAndContract
                     {
                         completionHandler(nil, "log out Admin account failed!")
                     }
+            }
+        }
+    }
+    
+    
+    class func grabTheMessage(_ name:String, _ email: String, _ message: String)
+    {
+        var logInWithAdmin = false
+        if (auth?.currentUser == nil)           // log in with the Admin account if their is no uesr log in.
+        {
+            AccountSetting.logInAdminAccount()
+                { (error) in
+            }
+            logInWithAdmin = true
+        }
+        let messageRef = ref.child("HelpAndContact").child("messages").childByAutoId()
+        messageRef.child("name").setValue(name)
+        messageRef.child("email").setValue(name)
+        messageRef.child("message").setValue(message)
+        
+        if logInWithAdmin       // log out the admin account to make sure it will not influence the other operation.
+        {
+            AccountSetting.logOut()
+                {
+                    (result) in
             }
         }
     }
