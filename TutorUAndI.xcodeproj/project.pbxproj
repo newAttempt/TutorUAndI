@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2DACBE2E01C96891D121EF54 /* Pods_TutorUAndI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB703AEDF63C3DA3DB266E6 /* Pods_TutorUAndI.framework */; };
 		3F28D8F41E71F3CA00C216AD /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F28D8F31E71F3CA00C216AD /* ItemList.swift */; };
+		3F336C0C1E77D86500BAB000 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F336C0B1E77D86500BAB000 /* Item.swift */; };
 		3F45B2291E66934E00D17D0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F45B2281E66934E00D17D0A /* AppDelegate.swift */; };
 		3F45B22B1E66934E00D17D0A /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F45B22A1E66934E00D17D0A /* LogInController.swift */; };
 		3F45B2301E66934E00D17D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F45B22F1E66934E00D17D0A /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		096CB963B76BA04052B1830E /* Pods-TutorUAndI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorUAndI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TutorUAndI/Pods-TutorUAndI.release.xcconfig"; sourceTree = "<group>"; };
 		3F28D8F31E71F3CA00C216AD /* ItemList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
+		3F336C0B1E77D86500BAB000 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		3F45B2251E66934E00D17D0A /* TutorUAndI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutorUAndI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F45B2281E66934E00D17D0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F45B22A1E66934E00D17D0A /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				D722A6AB1E6E108D0018D09A /* ItemsManager.swift */,
 				3F28D8F31E71F3CA00C216AD /* ItemList.swift */,
+				3F336C0B1E77D86500BAB000 /* Item.swift */,
 			);
 			name = ItemManagementModule;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			files = (
 				D722A6AC1E6E108D0018D09A /* ItemsManager.swift in Sources */,
 				3F45B22B1E66934E00D17D0A /* LogInController.swift in Sources */,
+				3F336C0C1E77D86500BAB000 /* Item.swift in Sources */,
 				D72B83681E77CF4500E5A167 /* CourseListingViewController.swift in Sources */,
 				D72B835F1E7791F100E5A167 /* ContactUsViewController.swift in Sources */,
 				D73741E31E736CF900AD0137 /* MyAccountProfileViewController.swift in Sources */,
