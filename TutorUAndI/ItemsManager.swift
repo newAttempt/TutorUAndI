@@ -14,51 +14,6 @@ let itemRef = FIRDatabase.database().reference().child("items")
 // itemRef show the path where items stored.
 
 
-class Item
-{
-    private var course: String
-    private var major: String
-    private var topic: String
-    private var discription: String
-    private var tutorID: String
-    
-    init(_ major: String, _ course: String,  _ topic: String, _ discription: String, _ tutorID: String) {
-        self.course = course
-        self.major = major
-        self.topic = topic
-        self.discription = discription
-        self.tutorID = tutorID
-    }
-    
-    
-    func storeInDataBase(_ pathFunc:(_ id: FIRDatabaseReference, _ name: String, _ value: String) -> ())
-    {
-        let path = itemRef.childByAutoId()
-        pathFunc(path, "course", course)
-        pathFunc(path, "major", major)
-        pathFunc(path, "topic", topic)
-        pathFunc(path, "discription", discription)
-        pathFunc(path, "tutorID", tutorID)
-    }
-    
-    
-    func display()
-    {
-        print("course: \(course)")
-        print("major: \(major)")
-        print("topic: \(topic)")
-        print("discription: \(discription)")
-        print("tutorID: \(tutorID)")
-    }
-    
-    
-    func get_course() -> String
-    {
-        return course
-    }
-}
-
-
 class ItemManager
 {
     static var item_queue = ItemQueue()
@@ -117,20 +72,21 @@ class ItemManager
     }
     
     
-    class func getCourseList() -> [String]
+    class func getCourseNameList() -> [(String, Int)]
     {
-        var list:[String] = []
+        var list:[(String, Int)] = []
         var num = 0
         for x in item_queue.getAsList()
         {
-            list.append("\(x.get_course())|num")
+            list.append((x.get_course(), num))
             num += 1
         }
+        
         return list
     }
     
     
-    class func getItemByListNumber(_ number:Int) -> Item
+    class func getItemByListNumber(_ number: Int) -> Item?
     {
         let list = item_queue.getAsList()
         return list[number]
@@ -157,6 +113,20 @@ class ItemManager
  
  */
 
+
+
+/*
+ This function will return a tuple which contains a String as course name and a Integer as a unique ID 
+ to get item back from list. The reason to use a unique ID is because one course name can exist mutiple times
+ int different table bars.
+ 
+ To use function getCourseList()
+ 
+    let list = ItemManager.getCourseList()
+    print(list[0].0) // this will out put the first node's string part in the list.
+ 
+ 
+ */
 
 
 

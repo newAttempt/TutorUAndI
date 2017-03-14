@@ -129,6 +129,24 @@ class AccountInfo
     }
     
     
+    class func getUserNameWithID(_ userID:String, completionHandler: @escaping (_ name:String?) -> ()) -> Bool
+    {
+        if  user == nil
+        {
+            //No user log in right now !!!
+            return false
+        }
+        
+        
+        ref.child("accInfo").child(user!.uid).observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary     // get the value from database and save them as NSDinctionary.
+            let name = value?["name"] as! String?           // get those informaion.
+            completionHandler(name)     // call the completionHandler which is a lamda experssion which passed in.
+        })
+        return true
+    }
+    
+    
     class func getAccountAddressInfo(completionHandler: @escaping (_ street: String?, _ apt:String?, _ city:String?, _ state: String?, _ zip: Int?) -> ()) -> Bool
     {
         if  user == nil
