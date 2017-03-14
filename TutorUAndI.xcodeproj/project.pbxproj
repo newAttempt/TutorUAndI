@@ -20,8 +20,12 @@
 		D722A6AC1E6E108D0018D09A /* ItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722A6AB1E6E108D0018D09A /* ItemsManager.swift */; };
 		D722A6B11E6E10ED0018D09A /* AccountSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722A6AF1E6E10ED0018D09A /* AccountSetting.swift */; };
 		D722A6B21E6E10ED0018D09A /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722A6B01E6E10ED0018D09A /* AccountInfo.swift */; };
+		D73741E11E736BD000AD0137 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73741E01E736BD000AD0137 /* SWRevealViewController.m */; };
+		D73741E31E736CF900AD0137 /* MyAccountProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73741E21E736CF900AD0137 /* MyAccountProfileViewController.swift */; };
+		D73741E71E73736300AD0137 /* MyAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73741E61E73736300AD0137 /* MyAccountTableViewController.swift */; };
 		D75CC8FB1E6BA5E5003BF24F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CC8FA1E6BA5E5003BF24F /* SignUpViewController.swift */; };
 		D75CC8FD1E6C045E003BF24F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75CC8FC1E6C045E003BF24F /* ProfileViewController.swift */; };
+		D7BAC7941E73E5C500F221B0 /* PageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BAC7931E73E5C500F221B0 /* PageTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +46,14 @@
 		D722A6AB1E6E108D0018D09A /* ItemsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsManager.swift; sourceTree = "<group>"; };
 		D722A6AF1E6E10ED0018D09A /* AccountSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSetting.swift; sourceTree = "<group>"; };
 		D722A6B01E6E10ED0018D09A /* AccountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
+		D73741DE1E736BCF00AD0137 /* TutorUAndI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TutorUAndI-Bridging-Header.h"; sourceTree = "<group>"; };
+		D73741DF1E736BD000AD0137 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		D73741E01E736BD000AD0137 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		D73741E21E736CF900AD0137 /* MyAccountProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountProfileViewController.swift; sourceTree = "<group>"; };
+		D73741E61E73736300AD0137 /* MyAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewController.swift; sourceTree = "<group>"; };
 		D75CC8FA1E6BA5E5003BF24F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D75CC8FC1E6C045E003BF24F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D7BAC7931E73E5C500F221B0 /* PageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +102,15 @@
 		3F45B23C1E66937D00D17D0A /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				D73741DF1E736BD000AD0137 /* SWRevealViewController.h */,
+				D73741E01E736BD000AD0137 /* SWRevealViewController.m */,
 				3F45B2281E66934E00D17D0A /* AppDelegate.swift */,
 				3F45B22F1E66934E00D17D0A /* Assets.xcassets */,
 				3F45B2311E66934E00D17D0A /* LaunchScreen.storyboard */,
 				3F45B2341E66934E00D17D0A /* Info.plist */,
 				3F45B23A1E66936100D17D0A /* GoogleService-Info.plist */,
+				D73741DE1E736BCF00AD0137 /* TutorUAndI-Bridging-Header.h */,
+				D7BAC7931E73E5C500F221B0 /* PageTableViewController.swift */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";
@@ -104,6 +118,8 @@
 		3F45B23D1E66939C00D17D0A /* AccountViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D73741E21E736CF900AD0137 /* MyAccountProfileViewController.swift */,
+				D73741E61E73736300AD0137 /* MyAccountTableViewController.swift */,
 				3F45B22A1E66934E00D17D0A /* LogInController.swift */,
 				D75CC8FC1E6C045E003BF24F /* ProfileViewController.swift */,
 				D75CC8FA1E6BA5E5003BF24F /* SignUpViewController.swift */,
@@ -191,6 +207,7 @@
 					3F45B2241E66934E00D17D0A = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = H3ZELCLQP9;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -282,12 +299,16 @@
 			files = (
 				D722A6AC1E6E108D0018D09A /* ItemsManager.swift in Sources */,
 				3F45B22B1E66934E00D17D0A /* LogInController.swift in Sources */,
+				D73741E31E736CF900AD0137 /* MyAccountProfileViewController.swift in Sources */,
 				D722A6B11E6E10ED0018D09A /* AccountSetting.swift in Sources */,
 				3F800DAD1E7125A90095DCF3 /* ErrorChecking.swift in Sources */,
 				3F45B2291E66934E00D17D0A /* AppDelegate.swift in Sources */,
+				D73741E71E73736300AD0137 /* MyAccountTableViewController.swift in Sources */,
 				D75CC8FD1E6C045E003BF24F /* ProfileViewController.swift in Sources */,
 				3F28D8F41E71F3CA00C216AD /* ItemList.swift in Sources */,
 				D75CC8FB1E6BA5E5003BF24F /* SignUpViewController.swift in Sources */,
+				D7BAC7941E73E5C500F221B0 /* PageTableViewController.swift in Sources */,
+				D73741E11E736BD000AD0137 /* SWRevealViewController.m in Sources */,
 				D722A6B21E6E10ED0018D09A /* AccountInfo.swift in Sources */,
 				3F7978B91E70F97F0097224D /* HelpAndContact.swift in Sources */,
 			);
@@ -405,11 +426,14 @@
 			baseConfigurationReference = 6DF5CEEACAAE9350F03815B8 /* Pods-TutorUAndI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = H3ZELCLQP9;
 				INFOPLIST_FILE = TutorUAndI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NAsoftware.TutorUAndI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TutorUAndI/TutorUAndI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -420,11 +444,13 @@
 			baseConfigurationReference = 096CB963B76BA04052B1830E /* Pods-TutorUAndI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = H3ZELCLQP9;
 				INFOPLIST_FILE = TutorUAndI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NAsoftware.TutorUAndI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TutorUAndI/TutorUAndI-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
