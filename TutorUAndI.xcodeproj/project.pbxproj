@@ -21,6 +21,7 @@
 		D722A6B11E6E10ED0018D09A /* AccountSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722A6AF1E6E10ED0018D09A /* AccountSetting.swift */; };
 		D722A6B21E6E10ED0018D09A /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722A6B01E6E10ED0018D09A /* AccountInfo.swift */; };
 		D72B835F1E7791F100E5A167 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72B835E1E7791F100E5A167 /* ContactUsViewController.swift */; };
+		D72B83681E77CF4500E5A167 /* CourseListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72B83671E77CF4500E5A167 /* CourseListingViewController.swift */; };
 		D73741E11E736BD000AD0137 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73741E01E736BD000AD0137 /* SWRevealViewController.m */; };
 		D73741E31E736CF900AD0137 /* MyAccountProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73741E21E736CF900AD0137 /* MyAccountProfileViewController.swift */; };
 		D73741E71E73736300AD0137 /* MyAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73741E61E73736300AD0137 /* MyAccountTableViewController.swift */; };
@@ -48,6 +49,7 @@
 		D722A6AF1E6E10ED0018D09A /* AccountSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSetting.swift; sourceTree = "<group>"; };
 		D722A6B01E6E10ED0018D09A /* AccountInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		D72B835E1E7791F100E5A167 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		D72B83671E77CF4500E5A167 /* CourseListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListingViewController.swift; sourceTree = "<group>"; };
 		D73741DE1E736BCF00AD0137 /* TutorUAndI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TutorUAndI-Bridging-Header.h"; sourceTree = "<group>"; };
 		D73741DF1E736BD000AD0137 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		D73741E01E736BD000AD0137 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				3F800DAB1E7125900095DCF3 /* ErrorCheckingModule */,
+				D72B83641E77C4B600E5A167 /* ItemManagementViewController */,
 				D72B0EBC1E68DA0D00E2506E /* ItemManagementModule */,
 				3F45B23E1E6693BE00D17D0A /* AccountManagementModule */,
 				3F45B23D1E66939C00D17D0A /* AccountViewControllers */,
@@ -155,6 +158,14 @@
 				3F28D8F31E71F3CA00C216AD /* ItemList.swift */,
 			);
 			name = ItemManagementModule;
+			sourceTree = "<group>";
+		};
+		D72B83641E77C4B600E5A167 /* ItemManagementViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D72B83671E77CF4500E5A167 /* CourseListingViewController.swift */,
+			);
+			name = ItemManagementViewController;
 			sourceTree = "<group>";
 		};
 		EA6DE3491589E0C600F43B24 /* Pods */ = {
@@ -302,6 +313,7 @@
 			files = (
 				D722A6AC1E6E108D0018D09A /* ItemsManager.swift in Sources */,
 				3F45B22B1E66934E00D17D0A /* LogInController.swift in Sources */,
+				D72B83681E77CF4500E5A167 /* CourseListingViewController.swift in Sources */,
 				D72B835F1E7791F100E5A167 /* ContactUsViewController.swift in Sources */,
 				D73741E31E736CF900AD0137 /* MyAccountProfileViewController.swift in Sources */,
 				D722A6B11E6E10ED0018D09A /* AccountSetting.swift in Sources */,
