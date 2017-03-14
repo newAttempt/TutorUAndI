@@ -2,92 +2,100 @@
 //  MyAccountTableViewController.swift
 //  TutorUAndI
 //
-//  Created by Tutu Wei on 3/9/17.
+//  Created by Tutu Wei on 3/10/17.
 //  Copyright © 2017 zeyong shan. All rights reserved.
 //
 
 import UIKit
 
-class MyAccountTableViewController: UITableViewController {
+class MyAccountTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
-    let cellIdentifier = "cell"
+    
+    var data = [String] ()
+    weak var tableView: UITableView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        data = ["PROFILE", "TRANSACTIONS OVERVIEW", "CALENDAR/REMIDER","MESSAGES","HELP & CONTACT","LOGOUT"]
+        
+        //let tableView = UITableView(frame:view.bounds)
+        let tableView = UITableView(frame:view.bounds)
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        tableView.separatorStyle = .none
+        
+        
+        view.addSubview(tableView)
+        self.tableView = tableView
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        // Do any additional setup after loading the view.
+    }
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        
+        // getting the right element
+        let element = data[indexPath.row]
+        
+        //Instantiate a cell
+       
+        let cellIdentifier = "ElementCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) ?? UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
+        
+                // Adding the right information
+        
+        cell.textLabel?.text = element
+        cell.textLabel?.textColor = UIColor.darkGray
+        
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 200
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 6
-    }
-
-  
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath)
-
-        cell.textLabel?.text = "This is row number \(indexPath.row + 1)"
-
-        return cell
-    }
-   
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        self.performSegue(withIdentifier: "changeScreen", sender: nil)
-    }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    */
 
+    
+    
+    //set Hearder section's bg color
     /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.orange
+        return headerView
+    }*/
+    
+    
+    
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
