@@ -50,6 +50,12 @@ class Item
         print("discription: \(discription)")
         print("tutorID: \(tutorID)")
     }
+    
+    
+    func get_course() -> String
+    {
+        return course
+    }
 }
 
 
@@ -57,7 +63,20 @@ class ItemManager
 {
     static var item_queue = ItemQueue()
     
-    class func addItem(_ major: String, _ course: String,  _ topic: String, _ discription: String, _ tutorID: String)
+    
+    class func addItem(_ major: String, _ course: String,  _ topic: String, _ discription: String) -> Bool
+    {
+        if !ErrorChecker.checkLogInState()
+        {
+            return false
+        }
+        let id = FIRAuth.auth()?.currentUser?.uid
+        addItem(major, course, topic, discription, id!)
+        return true
+    }
+    
+    
+    private class func addItem(_ major: String, _ course: String,  _ topic: String, _ discription: String, _ tutorID: String)
     {
         let item = Item.init(major, course, topic, discription, tutorID)
         item.storeInDataBase()
@@ -92,9 +111,29 @@ class ItemManager
     }
     
     
-    class func getItem() -> Item?
+    class func getItemOneByOne() -> Item?
     {
         return item_queue.dequeue()
+    }
+    
+    
+    class func getCourseList() -> [String]
+    {
+        var list:[String] = []
+        var num = 0
+        for x in item_queue.getAsList()
+        {
+            list.append("\(x.get_course())|num")
+            num += 1
+        }
+        return list
+    }
+    
+    
+    class func getItemByListNumber(_ number:Int) -> Item
+    {
+        let list = item_queue.getAsList()
+        return list[number]
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 
 // This file is not for controller use!
@@ -188,6 +189,13 @@ class ErrorChecker
             return error
         }
         return nil
+    }
+    
+    
+    class func checkLogInState() -> Bool
+    {
+        let user = FIRAuth.auth()?.currentUser
+        return user != nil
     }
     
     

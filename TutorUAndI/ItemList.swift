@@ -48,4 +48,11 @@ class ItemQueue
     {
         return restNum < enlargeStandard
     }
+    
+    
+    func getAsList() -> [Item]
+    {
+        return items
+    }
+    
 }
