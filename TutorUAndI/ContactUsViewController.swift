@@ -13,7 +13,7 @@ class ContactUsViewController: UIViewController, UITextViewDelegate {
     
     
     @IBOutlet weak var myTextView: UITextView!
-    var placeHolderLabel : UILabel!
+    //var placeHolderLabel : UILabel!
     
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class ContactUsViewController: UIViewController, UITextViewDelegate {
         myTextView.layer.cornerRadius = 5
         myTextView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
         myTextView.layer.borderWidth = 1.0;
-        myTextView.layer.cornerRadius = 5.0;
+       // myTextView.layer.cornerRadius = 5.0;
         
         self.textViewDidBeginEditing(myTextView)
         self.textViewDidEndEditing(myTextView)
