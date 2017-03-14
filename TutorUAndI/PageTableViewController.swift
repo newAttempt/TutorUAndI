@@ -40,7 +40,7 @@ class PageTableViewController: UITableViewController {
             self.performSegue(withIdentifier: "segueToOne", sender: nil)
         }
         if(indexPath.row==4){
-            self.performSegue(withIdentifier: "accountToHelp", sender: nil)
+            self.performSegue(withIdentifier: "contactUsSegue", sender: nil)
         }
         
         
