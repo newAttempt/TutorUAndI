@@ -75,7 +75,7 @@ class HelpAndContract
         }
         let messageRef = ref.child("HelpAndContact").child("messages").childByAutoId()
         messageRef.child("name").setValue(name)
-        messageRef.child("email").setValue(name)
+        messageRef.child("email").setValue(email)
         messageRef.child("message").setValue(message)
         
         if logInWithAdmin       // log out the admin account to make sure it will not influence the other operation.
