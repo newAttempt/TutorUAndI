@@ -18,7 +18,7 @@ class PageTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 180
+        return 140
     }
 
 
@@ -34,6 +34,19 @@ class PageTableViewController: UITableViewController {
         
         return cell
     }
+    @IBAction func logOutButton() {
+        AccountSetting.logOut(completionHandler: { (result) in
+            if result == false
+            {
+                //.............
+                print("\n\n\n\n\n\(result)\n\n\n\n\n")
+            }
+            else{
+                self.performSegue(withIdentifier: "BackToLogInSegue", sender: nil)
+            }
+        })
+
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(indexPath.row == 0){
@@ -42,6 +55,8 @@ class PageTableViewController: UITableViewController {
         if(indexPath.row==4){
             self.performSegue(withIdentifier: "contactUsSegue", sender: nil)
         }
+    
+        
         
         
     }
